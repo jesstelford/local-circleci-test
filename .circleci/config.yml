@@ -1,0 +1,11 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:carbon-browsers
+    working_directory: /home/circleci/repo
+    steps:
+      - checkout
+      - run: yarn
+      - run: node -e "console.log('hello world')"
