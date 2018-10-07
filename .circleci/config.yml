@@ -8,4 +8,4 @@ jobs:
     steps:
       - checkout
       - run: yarn
-      - run: node -e "console.log('hello world')"
+      - run: node -p "require('bcrypt').hashSync('password', 5)"
